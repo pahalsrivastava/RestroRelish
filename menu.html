@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="menu.css">
+  <title>RestroRelish Menu</title>
+</head>
+<body>
+
+  <header>
+    <h1>RestroRelish Menu</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showMenu('appetizers')">Appetizers</a></li>
+        <li><a href="#" onclick="showMenu('mainCourses')">Main Courses</a></li>
+        <li><a href="#" onclick="showMenu('desserts')">Desserts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="appetizers" class="menu-section">
+    <h2>Appetizers</h2>
+    <div class="menu-item" onclick="addToCart('Samosa', 25)">Samosa - ₹25</div>
+    <div class="menu-item" onclick="addToCart('Paneer Tikka', 100)">Paneer Tikka - ₹100</div>
+    <div class="menu-item" onclick="addToCart('Aloo Tikki', 80)">Aloo Tikki - ₹80</div>
+    <div class="menu-item" onclick="addToCart('Vegetable Pakora', 40)">Vegetable Pakora - ₹40</div>
+    <div class="menu-item" onclick="addToCart('Papdi Chaat', 50)">Papdi Chaat - ₹50</div>
+  </div>
+
+  <div id="mainCourses" class="menu-section">
+    <h2>Main Courses</h2>
+    <div class="menu-item" onclick="addToCart('Chicken Curry', 300)">Chicken Curry - ₹300</div>
+    <div class="menu-item" onclick="addToCart('Palak Paneer', 275)">Palak Paneer - ₹275</div>
+    <div class="menu-item" onclick="addToCart('Dal Makhani', 200)">Dal Makhani - ₹200</div>
+    <div class="menu-item" onclick="addToCart('Butter Chicken', 350)">Butter Chicken - ₹350</div>
+    <div class="menu-item" onclick="addToCart('Vegetable Biryani', 300)">Vegetable Biryani - ₹300</div>
+  </div>
+
+  <div id="desserts" class="menu-section">
+    <h2>Desserts</h2>
+    <div class="menu-item" onclick="addToCart('Gulab Jamun', 35)">Gulab Jamun - ₹35</div>
+    <div class="menu-item" onclick="addToCart('Rasgulla', 35)">Rasgulla - ₹35</div>
+    <div class="menu-item" onclick="addToCart('Kheer', 80)">Kheer - ₹80</div>
+    <div class="menu-item" onclick="addToCart('Jalebi', 35)">Jalebi - ₹35</div>
+    <div class="menu-item" onclick="addToCart('Rasmalai', 50)">Rasmalai - ₹50</div>
+  </div>
+
+  <div id="cart" class="cart-container" onclick="toggleCart()">
+    <div class="cart-icon">🛒</div>
+    <div id="cart-notification" class="cart-notification">0</div>
+    <div id="cart-content" class="cart-content">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="total">0.00</span></p>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+</body>
+</html>
