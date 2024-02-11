@@ -1,6 +1,4 @@
 function submitReservation() {
-    // You can add validation and AJAX submission here
-    // For simplicity, let's just log the form data to the console
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
@@ -13,5 +11,4 @@ function submitReservation() {
 
     console.log('Reservation Form Data:', formData);
 
-    // You can add code to send this data to the server or perform other actions
 }
